@@ -1,4 +1,4 @@
-package other.combinatorpattern.uservalidationsystem;
+package other.combinator.uservalidationsystem;
 
 // Represents the result of a validation
 public class ValidationResult {

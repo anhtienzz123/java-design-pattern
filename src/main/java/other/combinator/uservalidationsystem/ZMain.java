@@ -1,4 +1,4 @@
-package other.combinatorpattern.uservalidationsystem;
+package other.combinator.uservalidationsystem;
 
 // Client code
 public class ZMain {

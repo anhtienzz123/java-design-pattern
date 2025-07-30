@@ -1,4 +1,4 @@
-package other.combinatorpattern.uservalidationsystem;
+package other.combinator.uservalidationsystem;
 
 // Context: Represents a user to be validated
 public class User {

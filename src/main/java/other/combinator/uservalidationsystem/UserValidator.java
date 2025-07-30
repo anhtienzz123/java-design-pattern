@@ -1,4 +1,4 @@
-package other.combinatorpattern.uservalidationsystem;
+package other.combinator.uservalidationsystem;
 
 import java.util.function.Function;
 
