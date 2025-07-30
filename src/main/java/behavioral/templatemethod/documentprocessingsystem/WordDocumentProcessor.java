@@ -1,4 +1,4 @@
-package behavioral.documentprocessingsystem;
+package behavioral.templatemethod.documentprocessingsystem;
 
 // Concrete Class: Processes Word documents
 public class WordDocumentProcessor extends DocumentProcessor {

@@ -1,4 +1,4 @@
-package behavioral.documentprocessingsystem;
+package behavioral.templatemethod.documentprocessingsystem;
 
 // Concrete Class: Processes PDF documents
 public class PdfDocumentProcessor extends DocumentProcessor {

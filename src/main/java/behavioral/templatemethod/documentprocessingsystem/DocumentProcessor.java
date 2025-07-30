@@ -1,4 +1,4 @@
-package behavioral.documentprocessingsystem;
+package behavioral.templatemethod.documentprocessingsystem;
 
 // Abstract Class: Defines the template method and algorithm steps
 public abstract class DocumentProcessor {

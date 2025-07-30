@@ -1,4 +1,4 @@
-package behavioral.documentprocessingsystem;
+package behavioral.templatemethod.documentprocessingsystem;
 
 public class ZMain {
 	public static void main(String[] args) {
