@@ -11,19 +11,5 @@ public class ZMain {
 
 		DocumentCreator textDocumentCreator = new TextDocumentCreator();
 		textDocumentCreator.editDocument();
-
-//		== Output: 
-//		Opening PDF document
-//		Editing document...
-//		Saving PDF document
-//		Closing PDF document
-//		Opening Word document
-//		Editing document...
-//		Saving Word document
-//		Closing Word document
-//		Opening Text document
-//		Editing document...
-//		Saving Text document
-//		Closing Text document
 	}
 }
