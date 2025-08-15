@@ -14,12 +14,5 @@ public class ZMain {
 		GUIFactory macFactory = new MacFactory();
 		Application macApplication = new Application(macFactory);
 		macApplication.renderUI();
-
-//		== Ouput:
-//		Rendering a Windows-style button
-//		Checking a Windows-style checkbox
-//		--
-//		Rendering a Mac-style button
-//		Checking a Mac-style checkbox
 	}
 }
