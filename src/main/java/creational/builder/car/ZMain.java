@@ -14,10 +14,5 @@ public class ZMain {
 
 		Car car3 = director.constructLuxuryCar();
 		System.out.println("Luxury Car (Director): " + car3);
-
-//		== Ouput: 
-//		Direct Builder: Car [model=Hatchback, color=Red, engine=1.5L, hasSunroof=false]
-//		Basic Car (Director): Car [model=Sedan, color=Blue, engine=2.0L, hasSunroof=false]
-//		Luxury Car (Director): Car [model=SUV, color=Black, engine=3.5L, hasSunroof=true]
 	}
 }
