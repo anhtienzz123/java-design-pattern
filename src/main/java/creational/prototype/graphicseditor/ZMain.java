@@ -35,12 +35,5 @@ public class ZMain {
 		// Verify prototype is unchanged
 		System.out.println("Original Circle Prototype: ");
 		registry.getPrototype("circle").draw();
-		
-//		== Ouput:
-//		Drawing Circle [id=C1, radius=15, properties=[filled, shadow]]
-//		Drawing Circle [id=C2, radius=10, properties=[filled]]
-//		Drawing Rectangle [id=R1, width=25, height=30, properties=[bordered]]
-//		Original Circle Prototype: 
-//		Drawing Circle [id=null, radius=10, properties=[filled]]
 	}
 }
