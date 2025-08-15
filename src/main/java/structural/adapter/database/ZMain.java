@@ -11,10 +11,6 @@ public class ZMain {
 
 		// Using MySQL
 		DatabaseExecutor mySqlExecutor = new MySQLAdapter(new MySQLDBImpl());
-		mySqlExecutor.executeQuery(query);
-
-//		== Output: 
-//		Executing Oracle query: SELECT * FROM users [Translated for Oracle]
-//		Executing MySQL query: SELECT * FROM users [Translated for MySQL]			
+		mySqlExecutor.executeQuery(query);		
 	}
 }

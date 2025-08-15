@@ -8,11 +8,5 @@ public class ZMain {
 		player.play("wav", "audio.wav");
 		player.play("mp4", "video.mp4");
 		player.play("avi", "movie.avi");
-		
-//		== Ouput: 
-//		Playing MP3 file: song.mp3
-//		Playing wav file: audio.wav
-//		Playing mp4 file: video.mp4
-//		Invalid media type: avi
 	}
 }
