@@ -19,11 +19,5 @@ public class ZMain {
 		// Swap renderer at runtime (demonstrating flexibility)
 		((Circle) circle2).renderer = vectorRenderer;
 		circle2.draw();
-
-//		== Output:
-//		Drawing a circle with radius 5.0 using Vector rendering
-//		Drawing a circle with radius 10.0 using Raster rendering
-//		Drawing a rectangle with width 20.0 and height 15.0 using Vector rendering
-//		Drawing a circle with radius 10.0 using Vector rendering
 	}
 }
