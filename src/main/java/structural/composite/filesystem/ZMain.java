@@ -31,15 +31,5 @@ public class ZMain {
 		System.out.println("\nAfter removing " + file3.getName() + ":");
 		System.out.println("Size of " + dir2.getName() + ": " + dir2.getSize() + " bytes");
 		System.out.println("Size of " + root.getName() + ": " + root.getSize() + " bytes");
-		
-//		== Output: 
-//		Size of document.txt: 1000 bytes
-//		Size of Documents: 1000 bytes
-//		Size of Media: 7000 bytes
-//		Size of Root: 8000 bytes
-//
-//		After removing video.mp4:
-//		Size of Media: 2000 bytes
-//		Size of Root: 3000 bytes
 	}
 }
