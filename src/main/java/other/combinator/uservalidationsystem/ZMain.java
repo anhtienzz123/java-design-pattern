@@ -25,15 +25,5 @@ public class ZMain {
 		System.out.println("\nValidating email only for invalid user: " + invalidUser);
 		ValidationResult result3 = emailOnly.apply(invalidUser);
 		System.out.println("Result: " + result3);
-		
-//		== Output:
-//		Validating valid user: User{email='john.doe@example.com', password='secure1234', age=25}
-//		Result: Valid
-//
-//		Validating invalid user: User{email='invalid.email', password='short', age=16}
-//		Result: Invalid: Invalid email format
-//
-//		Validating email only for invalid user: User{email='invalid.email', password='short', age=16}
-//		Result: Invalid: Invalid email format
 	}
 }

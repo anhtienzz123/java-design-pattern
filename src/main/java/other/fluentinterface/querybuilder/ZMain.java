@@ -20,11 +20,5 @@ public class ZMain {
 		// Build a minimal query
 		String query4 = QueryBuilder.fromTable("employees").build();
 		System.out.println("Query 4: " + query4);
-		
-//		== Ouput
-//		Query 1: SELECT id, name, email FROM users
-//		Query 2: SELECT order_id, amount FROM orders WHERE status = 'pending' AND amount > 100
-//		Query 3: SELECT name, price FROM products WHERE category = 'electronics' ORDER BY price DESC
-//		Query 4: SELECT * FROM employees
 	}
 }
