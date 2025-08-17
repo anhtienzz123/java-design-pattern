@@ -16,21 +16,5 @@ public class ZMain {
 
 		// Use facade to end the movie
 		homeTheater.endMovie();
-
-//		== Ouput:
-//		Home Theater: Setting up to watch a movie...
-//		Projector: Turning on
-//		Projector: Setting input to DVD
-//		Sound System: Turning on
-//		Sound System: Setting volume to 5
-//		DVD Player: Turning on
-//		DVD Player: Playing movie 'Inception'
-//		Home Theater: Movie setup complete!
-//		Home Theater: Shutting down...
-//		DVD Player: Stopping movie
-//		DVD Player: Turning off
-//		Sound System: Turning off
-//		Projector: Turning off
-//		Home Theater: Shutdown complete!
 	}
 }
