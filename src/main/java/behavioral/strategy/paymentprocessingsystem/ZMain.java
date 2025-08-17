@@ -32,26 +32,5 @@ public class ZMain {
 		System.out.println("\nCheckout without strategy:");
 		cart.setPaymentStrategy(null);
 		cart.checkout();
-		
-//		== Ouput: 
-//		Added item worth 50.0. Total: 50.0
-//		Added item worth 30.0. Total: 80.0
-//
-//		Checkout with Credit Card:
-//		Payment strategy set to: CreditCardPayment
-//		Paid 80.0 using Credit Card (John Doe, Card: ****3456)
-//
-//		Checkout with PayPal:
-//		Payment strategy set to: PayPalPayment
-//		Paid 80.0 using PayPal (john.doe@example.com)
-//
-//		Checkout with Cryptocurrency:
-//		Payment strategy set to: CryptoPayment
-//		Paid 80.0 using Cryptocurrency (Wallet: 1A2b3C4d5E6f7G8h9J)
-//
-//		Checkout without strategy:
-//		Exception in thread "main" java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "paymentStrategy" is null
-//			at designpattern.behavioral.strategy.paymentprocessingsystem.ShoppingCart.setPaymentStrategy(ShoppingCart.java:14)
-//			at designpattern.behavioral.strategy.paymentprocessingsystem.Main.main(Main.java:33)
 	}
 }

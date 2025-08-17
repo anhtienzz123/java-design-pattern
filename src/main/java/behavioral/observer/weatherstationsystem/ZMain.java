@@ -31,23 +31,5 @@ public class ZMain {
 
 		// Update temperature
 		station.setTemperature(27.0f);
-		
-//		== Output:
-//		Attached observer: Display 1
-//		Attached observer: Display 2
-//		Attached observer: Logger
-//		Temperature updated to: 25.5°C
-//		Display 1 (Push): Temperature is 25.5°C
-//		Display 2 (Push): Temperature is 25.5°C
-//		Logger (Pull): Logged temperature: 25.5°C
-//		Detached observer: Display 2
-//		Temperature updated to: 26.0°C
-//		Display 1 (Push): Temperature is 26.0°C
-//		Logger (Pull): Logged temperature: 26.0°C
-//		Attached observer: Display 3
-//		Temperature updated to: 27.0°C
-//		Display 1 (Push): Temperature is 27.0°C
-//		Logger (Pull): Logged temperature: 27.0°C
-//		Display 3 (Push): Temperature is 27.0°C
 	}
 }

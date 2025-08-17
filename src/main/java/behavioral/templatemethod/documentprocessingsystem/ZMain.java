@@ -11,17 +11,5 @@ public class ZMain {
 		System.out.println("\nProcessing Word Document:");
 		DocumentProcessor wordProcessor = new WordDocumentProcessor();
 		wordProcessor.processDocument();
-
-//		== Output:
-//		Processing PDF Document:
-//		Opening PDF document
-//		Processing PDF content (e.g., extracting text)
-//		Saving PDF document
-//		Logging: PDF document processed successfully
-//
-//		Processing Word Document:
-//		Opening Word document
-//		Processing Word content (e.g., formatting text)
-//		Saving Word document
 	}
 }

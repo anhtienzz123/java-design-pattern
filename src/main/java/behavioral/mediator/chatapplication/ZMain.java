@@ -20,19 +20,5 @@ public class ZMain {
 		alice.send("Hello, everyone!");
 		bob.send("Hi, Alice!");
 		charlie.send("Hey, what's up?");
-
-//		== Output:
-//		Alice joined the chat room
-//		Bob joined the chat room
-//		Charlie joined the chat room
-//		Alice sends: Hello, everyone!
-//		Bob received: Hello, everyone! (from Alice)
-//		Charlie received: Hello, everyone! (from Alice)
-//		Bob sends: Hi, Alice!
-//		Alice received: Hi, Alice! (from Bob)
-//		Charlie received: Hi, Alice! (from Bob)
-//		Charlie sends: Hey, what's up?
-//		Alice received: Hey, what's up? (from Charlie)
-//		Bob received: Hey, what's up? (from Charlie)
 	}
 }

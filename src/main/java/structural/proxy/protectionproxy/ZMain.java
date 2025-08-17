@@ -18,12 +18,5 @@ public class ZMain {
 		} catch (SecurityException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
-		
-//		== Output:
-//		Admin attempting to delete:
-//		Deleting file: data.txt
-//
-//		User attempting to delete:
-//		Error: Access denied: Only admins can delete files
 	}
 }

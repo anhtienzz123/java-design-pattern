@@ -36,28 +36,6 @@ public class ZMain {
 		// Example 6: Using Builder pattern for fluent API
 		System.out.println("\n6. Using Builder pattern (fluent API):");
 		demonstrateBuilderPattern(context);
-
-//        == Output:
-//        === SQL Generation using Interpreter Pattern ===
-//
-//        1. Simple SELECT query:
-//        SQL: SELECT * FROM users
-//
-//        2. SELECT with WHERE conditions:
-//        SQL: SELECT name, email FROM users WHERE age > 25 AND department_id = 1
-//
-//        3. SELECT with JOIN:
-//        SQL: SELECT u.name /* WARNING: Column may not exist */, d.name /* WARNING: Column may not exist */ FROM users AS u INNER JOIN departments d ON u.department_id = d.id
-//
-//        4. Complex query with multiple clauses:
-//        SQL: SELECT u.name /* WARNING: Column may not exist */, d.name /* WARNING: Column may not exist */, p.name /* WARNING: Column may not exist */ FROM users AS u INNER JOIN departments d ON u.department_id = d.id LEFT JOIN projects p ON p.department_id = d.id WHERE u.age >= 21 AND p.status = 'Active' ORDER BY u.name ASC LIMIT 10
-//
-//        5. Parameterized queries:
-//        SQL with parameters: SELECT * FROM users WHERE age >= 25
-//        Parameter minAge = 25
-//
-//        6. Using Builder pattern (fluent API):
-//        SQL (Builder pattern): SELECT u.name /* WARNING: Column may not exist */, u.email /* WARNING: Column may not exist */, d.name /* WARNING: Column may not exist */ FROM users AS u INNER JOIN departments d ON u.department_id = d.id WHERE u.age > 21 AND d.budget > 100000 ORDER BY u.name ASC LIMIT 5
 	}
 
 	/**

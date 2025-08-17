@@ -29,24 +29,5 @@ public class ZMain {
         FileListVisitor listVisitor = new FileListVisitor();
         fileSystem.accept(listVisitor);
         System.out.println("File names: " + listVisitor.getFileNames());
-        
-//        == Output:
-//        Calculating total size:
-//        Entering directory: root
-//        Entering directory: home
-//        File: image.png, Size: 5000 bytes
-//        File: data.csv, Size: 2000 bytes
-//        Exiting directory: home
-//        File: doc1.txt, Size: 1000 bytes
-//        Exiting directory: root
-//        Total size: 8000 bytes
-//
-//        Generating file list:
-//        Listing directory: root
-//        Listing directory: home
-//        Listed file: image.png
-//        Listed file: data.csv
-//        Listed file: doc1.txt
-//        File names: [image.png, data.csv, doc1.txt]
     }
 }

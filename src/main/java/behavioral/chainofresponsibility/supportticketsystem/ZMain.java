@@ -30,23 +30,5 @@ public class ZMain {
 
 		System.out.println("\nProcessing ticket 4:");
 		level1.handleRequest(ticket4);
-		
-//		== Ouput: 
-//		Processing ticket 1:
-//		Level 1 Support: Handling ticket - Login issue
-//
-//		Processing ticket 2:
-//		Level 1 Support: Passing ticket to next level
-//		Level 2 Support: Passing ticket to next level
-//		Level 3 Support: Handling ticket - Server crash
-//
-//		Processing ticket 3:
-//		Level 1 Support: Passing ticket to next level
-//		Level 2 Support: Handling ticket - Database error
-//
-//		Processing ticket 4:
-//		Level 1 Support: Passing ticket to next level
-//		Level 2 Support: Passing ticket to next level
-//		Level 3 Support: No handler available for ticket - Unknown issue
 	}
 }

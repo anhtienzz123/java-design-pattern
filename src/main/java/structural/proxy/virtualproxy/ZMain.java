@@ -18,17 +18,5 @@ public class ZMain {
 		// Display image2 (loads and displays)
 		System.out.println("\nFirst display of image2:");
 		image2.display();
-		
-//		== Output: 
-//		First display of image1:
-//		Loading image from file: photo1.jpg
-//		Displaying image: photo1.jpg
-//
-//		Second display of image1:
-//		Displaying image: photo1.jpg
-//
-//		First display of image2:
-//		Loading image from file: photo2.jpg
-//		Displaying image: photo2.jpg
 	}
 }

@@ -25,16 +25,5 @@ public class ZMain {
 		while (iterator2.hasNext()) {
 			System.out.println(iterator2.next());
 		}
-
-//		== Output: 
-//		Iterating over books:
-//		Book: Design Patterns
-//		Book: Clean Code
-//		Book: Refactoring
-//
-//		Using a second iterator:
-//		Book: Design Patterns
-//		Book: Clean Code
-//		Book: Refactoring
 	}
 }

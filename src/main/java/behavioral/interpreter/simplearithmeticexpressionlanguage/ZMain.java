@@ -21,9 +21,5 @@ public class ZMain {
 		Expression anotherExpression = new SubtractExpression(new VariableExpression("y"), new NumberExpression(2));
 		int anotherResult = anotherExpression.interpret(context);
 		System.out.println("Expression (y - 2) with y=3 evaluates to: " + anotherResult);
-		
-//		== Output:
-//		Expression (x + 5 - y) with x=10, y=3 evaluates to: 12
-//		Expression (y - 2) with y=3 evaluates to: 1
 	}
 }

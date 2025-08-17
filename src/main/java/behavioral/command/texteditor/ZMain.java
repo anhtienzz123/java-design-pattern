@@ -26,17 +26,5 @@ public class ZMain {
 		toolbar.undo(); // Undo type 'B' (delete 'B')
 		toolbar.undo(); // Undo type 'A' (delete 'A')
 		toolbar.undo(); // Nothing to undo
-		
-//		== Output:
-//		Executing commands:
-//		Typed: A, Text: A
-//		Typed: B, Text: AB
-//		Deleted: B, Text: A
-//
-//		Undoing commands:
-//		Typed: B, Text: AB
-//		Deleted: B, Text: A
-//		Deleted: A, Text: 
-//		Nothing to undo
 	}
 }
