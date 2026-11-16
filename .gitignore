@@ -19,3 +19,6 @@ buildNumber.properties
 
 #VS
 .vscode/
+
+# Eclipse / VS Code annotation processor config
+.factorypath
