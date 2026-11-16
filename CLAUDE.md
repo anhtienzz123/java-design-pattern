@@ -4,101 +4,61 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a comprehensive Java Design Patterns educational repository that demonstrates 23+ design patterns with practical implementations. The project uses Java 21+ features and follows SOLID, DRY, KISS, and YAGNI principles with OWASP security best practices.
+Educational repository of Java design patterns (GoF plus extras such as Retry, Specification, Intercepting Filter), each shown through one or more real-world use cases. Maven project compiled with `maven.compiler.release=26`.
 
-## Build and Development Commands
+Libraries (see `pom.xml`): Lombok (annotation processor, `provided`), JUnit Jupiter 6 and AssertJ (test scope). `.mvn/jvm.config` silences Lombok's `sun.misc.Unsafe` warning on JDK 26.
 
-### Maven Commands
-- **Compile**: `mvn compile`
-- **Clean and compile**: `mvn clean compile`
-- **Run a specific main class**: `mvn exec:java -Dexec.mainClass="behavioral.chainofresponsibility.approvalsystem.ZMain"`
-- **Package**: `mvn package`
+## Build and Run
 
-### Running Examples
-Each pattern implementation has a `ZMain.java` class that demonstrates the pattern. Examples:
-- Chain of Responsibility: `java -cp target/classes behavioral.chainofresponsibility.approvalsystem.ZMain`
-- Boolean Logic Interpreter: `java -cp target/classes behavioral.interpreter.booleanlogic.ZMain`
-- Singleton patterns: `java -cp target/classes creational.singleton.loggersystem.ZMain`
+```bash
+mvn clean compile
+java -cp target/classes behavioral.chainofresponsibility.approvalsystem.ZMain
+```
+
+Every use case has a runnable `ZMain` class; swap in its fully qualified name.
 
 ### Testing
-Some patterns include dedicated test classes (e.g., `BooleanLogicInterpreterTest.java`):
-- Compile: `javac src/main/java/behavioral/interpreter/booleanlogic/*.java`
-- Run tests: `java -cp target/classes behavioral.interpreter.booleanlogic.BooleanLogicInterpreterTest`
+New tests go in `src/test/java` (same package as the code) using JUnit Jupiter + AssertJ, and run with `mvn test`. Tests are optional — the `ZMain` demo is the main way to show a pattern.
 
-## Code Architecture
+The older `behavioral/interpreter/booleanlogic/BooleanLogicInterpreterTest.java` is a plain `main()` class under `src/main`:
 
-### Project Structure
-```
-src/main/java/
-├── behavioral/          # Behavioral design patterns
-│   ├── chainofresponsibility/
-│   ├── command/
-│   ├── interpreter/
-│   ├── iterator/
-│   ├── mediator/
-│   ├── memento/
-│   ├── observer/
-│   ├── state/
-│   ├── strategy/
-│   ├── templatemethod/
-│   └── visitor/
-├── creational/          # Creational design patterns
-│   ├── abstractfactory/
-│   ├── builder/
-│   ├── factorymethod/
-│   ├── prototype/
-│   ├── simplefactory/
-│   └── singleton/
-├── structural/          # Structural design patterns
-│   ├── adapter/
-│   ├── bridge/
-│   ├── composite/
-│   ├── decorator/
-│   ├── facade/
-│   ├── flyweight/
-│   └── proxy/
-└── other/              # Additional patterns
-    ├── combinator/
-    ├── fluentinterface/
-    └── servicelocator/
+```bash
+java -cp target/classes behavioral.interpreter.booleanlogic.BooleanLogicInterpreterTest
 ```
 
-### Pattern Implementation Standards
-- Each pattern is implemented in its own package with real-world scenarios
-- Main demonstration classes are named `ZMain.java`
-- Complex patterns include comprehensive README.md documentation
-- Some patterns include dedicated test suites
-- Thread-safe implementations where applicable (especially Singleton patterns)
+## Code Structure
 
-### Key Implementation Details
-- **Behavioral Patterns**: Focus on communication between objects and assignment of responsibilities
-  - Chain of Responsibility: Multi-level approval systems with configurable chains
-  - Interpreter: Boolean logic evaluation with comprehensive test coverage
-  - Memento: Game state and text editor undo/redo functionality
-  
-- **Creational Patterns**: Deal with object creation mechanisms
-  - Singleton: Thread-safe implementations for logging, caching, configuration, and database connection pooling
-  - Abstract Factory: Database connectivity and GUI application factories
-  - Builder: Car configuration with fluent interface
-  
-- **Structural Patterns**: Deal with object composition and relationships
-  - Adapter: Database and media player integration
-  - Composite: File system and organizational hierarchy modeling
-  - Decorator: Coffee shop customization system
+```
+src/main/java/<category>/<pattern>/<usecase>/
+    *.java        # pattern classes for this use case
+    ZMain.java    # runnable demo
+    README.md     # explanation (for non-trivial patterns)
+```
 
-### Development Guidelines (from .cursor/rules)
-- You are an experienced Senior Java Developer.
-- Use Java 21+ features (records, sealed classes, pattern matching, virtual threads)
-- Follow SOLID, DRY, KISS, and YAGNI principles
-- Adhere to OWASP security best practices
-- Break tasks into smallest units and solve step-by-step
-- Maintain thread safety for shared resources
+- `<category>` is `behavioral`, `creational`, `structural`, or `other` (non-GoF patterns).
+- Examples: `behavioral/state/trafficlight/`, `creational/singleton/loggersystem/`, `other/interceptingfilter/apigateway/`.
+- A pattern can have several use cases side by side (e.g. `structural/adapter/database/`, `structural/adapter/paymentsystem/`).
+- Exception: `other/retry/`, `other/specification/`, and `other/stepbuilder/` keep their files directly in the pattern package. This is intentional — leave them as they are.
 
-## Adding New Patterns
-When implementing new design patterns:
-1. Create appropriate package under behavioral/, creational/, structural/, or other/
-2. Include a `ZMain.java` demonstration class
-3. Add comprehensive README.md if the pattern is complex
-4. Consider thread safety implications
-5. Follow existing naming conventions and project structure
-6. Include practical real-world use cases in the implementation
+## Adding a Pattern or Use Case
+
+1. Create `<category>/<pattern>/<usecase>/` — every new use case gets its own sub-package.
+2. Pick a simple, familiar real-world scenario.
+3. Add a `ZMain.java` demo that prints what is happening.
+4. Add a short `README.md` (intent, problem, solution, structure, participants).
+5. Compile with `mvn clean compile` and run the `ZMain` to check the output.
+
+## Coding Guidelines
+
+The repo exists to learn the **idea** of each pattern, so keep implementations minimal:
+
+- Write only the classes and methods needed to show the pattern's participants and how they interact. Skip anything that doesn't help explain the pattern.
+- Avoid production extras unless they are the point of the pattern: no input validation, security hardening, logging frameworks, configuration, or edge-case handling. Thread safety only where the pattern is about it (e.g. Singleton).
+- Keep the scenario small: a few concrete classes, and a short `ZMain` that clearly shows the pattern working.
+- Keep READMEs short: intent, problem, solution, structure diagram, participants.
+- Use modern Java (records, sealed types, switch expressions, pattern matching) where it makes the code shorter and clearer.
+
+### Lombok
+- Prefer a `record` for simple immutable data; use Lombok only for regular classes (`@Getter`, `@RequiredArgsConstructor`, `@ToString`).
+- Never let Lombok generate the pattern itself: no `@Builder` in Builder / Step Builder examples, no `@Delegate` in Proxy / Decorator / Adapter examples. The pattern code must stay visible and hand-written.
+- Avoid `@Data`, `@SneakyThrows`, and `@Slf4j` (no logging framework; demos use `System.out`).
